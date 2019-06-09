@@ -1,0 +1,136 @@
+body {
+    background-color: #636F79;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.button-container {
+    text-align: center;
+
+    .trigger {
+        margin: 10px;
+        padding: 5px 10px;
+    }
+}
+
+.modal {
+    background-color: #636F79;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+
+    .modal-content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #F2F2F2;
+    }
+
+    .top-section {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #203240;
+        font-weight: 600;
+        text-align: center;
+
+        .green-check {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .heading-text {
+            float: left;
+            width: 80%;
+            text-align: left;
+        }
+
+    }
+
+    .desc {
+        color: #AFAFAF;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .buttons {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #AFAFAF;
+        padding-top: 5px;
+
+        button {
+            margin: 2px 10px;
+            padding: 5px 30px;
+            background-color: #F2F2F2;
+            color: black;
+            width: 90%;
+            border-radius: 3px;
+            border: 1px solid;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        button.modal-continue {
+            color: white;
+            background-color: #203240;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.show-modal {
+    display: block;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.clear {
+    clear: both;
+}
+
+// Responsive code
+@media (min-width: 500px) {
+    .modal {
+        .modal-content {
+            width: 70%;
+        }
+        .top-section {
+            padding: 40px 40px 25px 40px;
+        }
+
+        .buttons {
+            padding-top: 15px;
+            
+            button {
+                width: 40%;
+                margin: 0;
+            }
+        }
+    }
+}
+
+// Fix width on larger desktop screens
+@media (min-width: 1200px) {
+    .modal .modal-content {
+        width: 800px;
+    }
+}
